@@ -6,15 +6,21 @@ class Colas():
         self.Cola.append(Valor)
     
     def pop(self):
-        self.Cola.pop(0)   
-
+        if len(self.Cola) !=0:
+            self.Cola.pop(0)   
+        else:
+            print("Lista vacia.")
     def imprimir(self):
-        for i in self.Cola:
-            print(self.Cola) 
-
+        if len(self.Cola) !=0:
+            for i in self.Cola:
+                print(self.Cola) 
+        else:
+            print("Lista vacia.")
 if __name__== "__main__":
     Cola=Colas()
 
+Cola.imprimir()
+Cola.pop()
 Cola.push(3)
 Cola.push(4)
 Cola.push(5)
