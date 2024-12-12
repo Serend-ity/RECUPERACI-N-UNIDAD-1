@@ -6,15 +6,22 @@ class Pilas():
         self.Pila.append(Valor)
     
     def pop(self):
-        self.Pila.pop()
+        if len(self.Pila ) !=0:
+            self.Pila.pop()
+        else:
+            print ("Lista vacia.")
 
     def imprimir(self):
-        for i in self.Pila:
-            print(self.Pila) 
-
+        if len(self.Pila ) !=0:
+            for i in self.Pila:
+                print(self.Pila) 
+        else:
+            print ("Lista vacia.")
 if __name__== "__main__":
     Pila=Pilas()
 
+Pila.imprimir()
+Pila.pop()
 Pila.push(3)
 Pila.push(4)
 Pila.push(5)
